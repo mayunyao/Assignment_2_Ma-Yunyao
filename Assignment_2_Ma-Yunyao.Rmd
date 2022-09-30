@@ -1,0 +1,31 @@
+---
+title: "Assignment_2"
+author: "Ma-Yunyao"
+date: "2022-09-30"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+# Assignment2
+
+Step 5: In A code chunk make a *data frame* from the air quality dataset. In the same chunk clean the dataset from *NA values*. Knit the **RMarkdown file** and make a **PDF file**.
+
+
+
+1. Take rows *1-10* from airquality dataset.
+
+2.*'aq'* is a data frame which includes rows 1-10 from airquality dataset.
+
+
+
+
+Using code *complete.case()* to *filter* the rows which contain NA in data set *'aq'*.
+
+```{r}
+aq<-data.frame(airquality[1:10,])
+print(aq)
+good<-complete.cases(aq)
+aq[good,]
+```
+
